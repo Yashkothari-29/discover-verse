@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
@@ -25,8 +26,8 @@ const Index = () => {
                 <h2 className="text-3xl font-bold">Explore Nearby</h2>
                 <p className="text-muted-foreground">Discover businesses in your local area</p>
               </div>
-              <Button variant="outline" className="font-medium">
-                View Full Map
+              <Button variant="outline" className="font-medium" asChild>
+                <Link to="/map">View Full Map</Link>
               </Button>
             </div>
             
@@ -45,11 +46,11 @@ const Index = () => {
                     Join our directory to reach more customers, manage your online presence, and grow your business with powerful tools.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button className="bg-white text-brand-600 hover:bg-white/90 hover:text-brand-700 font-medium">
-                      Register Your Business
+                    <Button className="bg-white text-brand-600 hover:bg-white/90 hover:text-brand-700 font-medium" asChild>
+                      <Link to="/register">Register Your Business</Link>
                     </Button>
-                    <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                      Learn More
+                    <Button variant="outline" className="border-white text-white hover:bg-white/20" asChild>
+                      <Link to="/businesses">Learn More</Link>
                     </Button>
                   </div>
                 </div>
