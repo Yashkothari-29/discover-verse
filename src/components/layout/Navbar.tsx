@@ -66,11 +66,11 @@ const Navbar = () => {
             <Search className="h-4 w-4" />
           </Button>
           <ThemeToggle />
-          <Button variant="outline" className="font-medium">
-            Sign In
+          <Button variant="outline" className="font-medium" asChild>
+            <Link to="/login">Sign In</Link>
           </Button>
-          <Button className="bg-gradient-to-r from-brand-600 to-teal-500 hover:from-brand-700 hover:to-teal-600 text-white font-medium">
-            Register
+          <Button className="bg-gradient-to-r from-brand-600 to-teal-500 hover:from-brand-700 hover:to-teal-600 text-white font-medium" asChild>
+            <Link to="/register">Register</Link>
           </Button>
         </div>
         
@@ -120,15 +120,17 @@ const Navbar = () => {
               Map
             </Link>
             <div className="pt-2 flex flex-col space-y-2">
-              <Button variant="outline" className="w-full justify-start">
-                <Search className="h-4 w-4 mr-2" />
-                Search
+              <Button variant="outline" className="w-full justify-start" asChild>
+                <Link to="/businesses">
+                  <Search className="h-4 w-4 mr-2" />
+                  Search
+                </Link>
               </Button>
-              <Button variant="outline" className="w-full">
-                Sign In
+              <Button variant="outline" className="w-full" asChild>
+                <Link to="/login">Sign In</Link>
               </Button>
-              <Button className="w-full bg-gradient-to-r from-brand-600 to-teal-500">
-                Register
+              <Button className="w-full bg-gradient-to-r from-brand-600 to-teal-500" asChild>
+                <Link to="/register">Register</Link>
               </Button>
             </div>
           </div>
